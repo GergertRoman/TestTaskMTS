@@ -21,10 +21,18 @@ public interface iWDElements extends iConst
     By year = By.xpath("/html/body/div[1]/div[2]/div[2]/div/div[2]/div[2]/div/div/div[3]/div[2]/div[1]/div/div[5]/div[3]/h1/span/span/span[2]");
     By player = By.xpath("//*[@id=\"player-container0\"]/div[3]/yaplayertag/div[1]/div[1]/div/video");
     By expandButton = By.xpath("//*[@id=\"player-container0\"]/div[3]/yaplayertag/div[1]/div[2]/div/div/div/div/div[4]/div[1]/div[2]/div[3]/button[4]");
+
+    By searchField = By.id("uniq15887768464221");
+    By firstSearchFilmsName = By.xpath("//*[@id=\"stream-serp__layout\"]/div/div[2]/div[1]/div/div/div[2]/div[1]/div[1]/a");
+    By firstSearchFilmsInfo = By.xpath("//*[@id=\"stream-serp__layout\"]/div/div[2]/div[1]/div/div/div[2]/div[2]/div/div");
 }
 
 interface iConst
 {
+    String yandex = "https://www.yandex.ru";
+    String yandexEfir = "https://yandex.ru/efir";
     String dummyTitleText = "Покупок пока нет";
-    String dummySubtitleText = "Покупайте и смотрите новинки не выходя из дома";
+    String dummySubtitleText = "Покупайте и смотрите новинки";
+    String filmName = "Апгрейд";
+    String infoForSearchFilm = "2018 • фантастика, триллер, детектив, криминал";
 }

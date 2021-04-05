@@ -11,6 +11,11 @@ public class PatternStartScreen extends Web_Settings
         this.driver = driver;
     }
 
+    public PatternStartScreen openYandex() {
+        driver.get(yandex);
+        return this;
+    }
+
     public PatternStartScreen pressMore() {
         waitVisibleElement(more);
         click(more);

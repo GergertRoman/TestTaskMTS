@@ -10,7 +10,9 @@ public interface iWDInterface extends iWDElements {
 
     void click(By by);
 
-    void sendKeys(By by, String str);
+    void insertText(By by, String str);
+
+    void pressEnter(By by);
 
     void messageConsole(String str);
 

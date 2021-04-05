@@ -22,7 +22,6 @@ public abstract class Web_Settings extends WDFunctions {
         driver = new ChromeDriver(service, options);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.manage().deleteAllCookies();
-        driver.get("https://www.yandex.ru");
     }
 
     @AfterMethod

@@ -13,18 +13,31 @@ public class PatternEfirScreen extends Web_Settings
         this.driver = driver;
     }
 
+    public PatternEfirScreen openYandexEfir() {
+        driver.get(yandexEfir);
+        return this;
+    }
+
     public PatternEfirScreen pressMyPurchases() {
         waitVisibleElement(myPurchases);
         click(myPurchases);
         return this;
     }
 
-    public PatternEfirScreen CheckDummy() {
+    public PatternEfirScreen checkDummy() {
         waitVisibleElement(dummyPictures);
         waitVisibleElement(dummyTitle);
         waitVisibleElement(dummySubTitle);
         assertEquals(getText(dummyTitle), dummyTitleText);
         assertEquals(getText(dummySubTitle), dummySubtitleText);
+        return this;
+    }
+
+    public PatternEfirScreen checkInfoSearchFilm() {
+        waitVisibleElement(firstSearchFilmsName);
+        waitVisibleElement(firstSearchFilmsInfo);
+        assertEquals(getText(firstSearchFilmsName), filmName);
+        assertEquals(getText(firstSearchFilmsInfo), infoForSearchFilm);
         return this;
     }
 
@@ -51,6 +64,16 @@ public class PatternEfirScreen extends Web_Settings
     }
 
     public PatternEfirScreen pressExpendButton() {
+        driver.findElement(expandButton).click();
+        return this;
+    }
+
+    public PatternEfirScreen insertTextInSearchField(String searchFilm) {
+       insertText(searchField, searchFilm);
+        return this;
+    }
+
+    public PatternEfirScreen pressSearchButton() {
         driver.findElement(expandButton).click();
         return this;
     }
